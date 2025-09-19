@@ -111,7 +111,7 @@
 
 // export default Letter;
 import React from 'react';
-
+import { AnimatePresence } from "framer-motion";
 
 const Letter = () => {
   const containerVariants = {
