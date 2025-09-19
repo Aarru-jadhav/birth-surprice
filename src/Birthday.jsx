@@ -61,7 +61,7 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+
 
 
 const Birthday = () => {
