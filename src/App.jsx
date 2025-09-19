@@ -116,7 +116,7 @@ import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
 import "./App.css";
-
+import { motion } from "framer-motion";
 const App = () => {
   const [screen, setScreen] = useState("password");
   const [timeLeft, setTimeLeft] = useState(10);

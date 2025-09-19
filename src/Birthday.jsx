@@ -53,7 +53,7 @@
 //           <span className="text-5xl">🎉</span>
 //         </div>
 //       </div>
-//     </motion.div>
+//     </motion.div>s
 //   );
 // };
 
@@ -61,6 +61,7 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
+import { Motion } from "framer-motion";
 
 
 
@@ -87,7 +88,7 @@ const Birthday = () => {
   }, []);
 
   return (
-    <motion.div
+    <Motion.div
       className="relative flex flex-col items-center justify-center min-h-screen text-center bg-gray-950 p-6 overflow-hidden font-poppins"
       variants={containerVariants}
       initial="hidden"
@@ -111,7 +112,7 @@ const Birthday = () => {
 
       {/* Main content container */}
       <div className="relative z-10 flex flex-col items-center p-8 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10 shadow-lg max-w-lg mx-auto">
-        <motion.div
+        <Motion.div
           className="relative text-7xl mb-6 text-pink-400 animate-fade-in-slow"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -133,18 +134,18 @@ const Birthday = () => {
             </svg>
           </span>
           <div className="absolute inset-0 bg-pink-500 rounded-full opacity-0 blur-xl animate-pulse-glow"></div>
-        </motion.div>
+        </Motion.div>
 
-        <motion.h1
+        <Motionotion.h1
           className="text-4xl sm:text-5xl font-extrabold text-white mb-2"
           variants={textVariants}
           initial="hidden"
           animate="visible"
         >
           Happy Birthday!
-        </motion.h1>
+        </Motionotion.h1>
 
-        <motion.h2
+        <Motion.h2
           className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-4"
           variants={textVariants}
           initial="hidden"
@@ -152,9 +153,9 @@ const Birthday = () => {
           transition={{ ...textVariants.visible.transition, delay: 0.2 }}
         >
           CHIKU ❤️
-        </motion.h2>
+        </Motion.h2>
 
-        <motion.p
+        <Motion.p
           className="text-lg text-gray-400 mb-8 font-light"
           variants={textVariants}
           initial="hidden"
@@ -162,9 +163,9 @@ const Birthday = () => {
           transition={{ ...textVariants.visible.transition, delay: 0.4 }}
         >
           Wishing you a day filled with elegance, grace, and joy.
-        </motion.p>
+        </Motion.p>
 
-        <motion.button
+        <Motion.button
           onClick={() => navigate("/messages")}
           className="relative px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-full shadow-2xl transition-transform hover:scale-105"
           variants={textVariants}
@@ -174,9 +175,9 @@ const Birthday = () => {
         >
           <span className="relative z-10">Uncover Your Messages →</span>
           <div className="absolute inset-0 rounded-full opacity-30 bg-purple-400 blur-lg animate-button-glow"></div>
-        </motion.button>
+        </Motion.button>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 
