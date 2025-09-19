@@ -139,7 +139,7 @@
 // export default MessagesPage;
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { AnimatePresence } from "framer-motion";
 
 const MessagesPage = () => {
   const messages = [
